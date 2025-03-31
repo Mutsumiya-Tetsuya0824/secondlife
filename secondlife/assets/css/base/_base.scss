@@ -1,0 +1,164 @@
+
+* {
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  padding-top: 0 !important;
+  &.fixed {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
+}
+
+picture {
+  display: block;
+  @include sm {
+    text-align: center;
+  }
+}
+
+.wrap {
+  padding-top: 80px;
+  color: #222222;
+  font-size: 16px;
+  line-height: 1.889;
+  overflow: hidden;
+  text-align: justify;
+  @include sm {
+    padding-top: 25px;
+  }
+  img {
+    max-width: 100%;
+    vertical-align: bottom;
+  }
+}
+
+
+.pc {
+  display: block !important;
+}
+
+.sp {
+  display: none !important;
+}
+
+.tab {
+  display: none;
+  @include lg {
+    display: block;
+  }
+}
+
+.pc-inline {
+  display: inline !important;
+  @include sm {
+    display: none!important;
+  }
+}
+
+.sp-inline {
+  display: none !important;
+  @include sm {
+    display: inline !important;
+  }
+}
+
+a {
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.super {
+  font-size: 0.8em;
+  vertical-align: super;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  transition: opacity 0.3s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover  {
+  opacity: 0.7;
+}
+
+
+
+.js-fade {
+  opacity: 0;
+  transition: opacity 1.5s;
+  &.js-on {
+    opacity: 1;
+  }
+}
+
+.js-fade-image {
+  opacity: 0;
+  transform: scale(1.05);
+  transition: transform 1.5s, opacity 1.5s;
+  &.js-on {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.cmn-cv {
+  display: none;
+}
+
+.cmn-footer {
+  background: #8D8D8D;
+  font-family: YakuHanJP, 'Noto Sans JP', sans-serif;
+}
+
+.cmn-footer-list-heading a,
+.cmn-footer-list-content a {
+  color: #fff;
+}
+
+.cmn-footer a, .cmn-footer a:link {
+  letter-spacing: normal;
+  top: 8px;
+}
+.cmn-footer-list-content a {
+  @include sm { 
+    color: #333;
+  }
+}
+
+.cmn-footer-list-heading a::before,
+.cmn-footer-list-heading a::after {
+  border-color: #fff;
+}
+
+.cmn-footer-icon img {
+  filter: invert(100%);
+}
+
+.cmn-footer-list-bottom {
+  justify-content: flex-start;
+}
+
+.cmn-footer-list-bottom .cmn-footer-list-heading:first-child {
+  display: none;
+}
+
+.cmn-footer-list-bottom .cmn-footer-list-heading:last-child {
+  margin-left: 30px;
+}
+
